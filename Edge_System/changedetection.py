@@ -30,7 +30,7 @@ class ChangeDetection:
         change_flag = 0
         i =0
         while i < 1:
-            if self.result_prev[i]==0 and detected_current[i] == 1:
+            if (self.result_prev[i]==0 and detected_current[i] == 1) or (self.result_prev[i]==1 and detected_current[i] == 0):
                 change_flag = 1
                 self.title = names[i]
                 self.text += names[i] + ","
